@@ -177,6 +177,9 @@ type Daemon interface {
 
 	// Run - run executable service
 	Run(e Executable) (string, error)
+	
+	// Indicator of whether the service is installed.
+	IsInstalled() (bool)
 }
 
 // Executable interface defines controlling methods of executable service
@@ -187,6 +190,10 @@ type Executable interface {
 	Stop()
 	// Run - blocking run service
 	Run()
+}
+
+func IsInstalled () (bool) {
+	return isInstalled()
 }
 
 // New - Create a new daemon
