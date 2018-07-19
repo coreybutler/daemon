@@ -192,8 +192,10 @@ type Executable interface {
 	Run()
 }
 
-func IsInstalled () (bool) {
-	return isInstalled()
+func (d *Daemon) IsInstalled () (bool) {
+	_, err := d.Status()
+	fmt.Println(err.Error())
+	return false
 }
 
 // New - Create a new daemon
