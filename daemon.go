@@ -177,9 +177,6 @@ type Daemon interface {
 
 	// Run - run executable service
 	Run(e Executable) (string, error)
-	
-	// Indicator of whether the service is installed.
-	IsInstalled() (bool)
 }
 
 // Executable interface defines controlling methods of executable service
