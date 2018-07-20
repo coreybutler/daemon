@@ -189,7 +189,7 @@ type Executable interface {
 	Run()
 }
 
-func (d *Daemon) IsInstalled () (bool) {
+func IsInstalled (d *Daemon) (bool) {
 	_, err := d.Status()
 	fmt.Println(err.Error())
 	return false
